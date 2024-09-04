@@ -1,0 +1,12 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Es from "@/languages/es.json";
+
+import { head } from '@/languages/es.json';
+const { index } = head;
+const { title, description } = index;
+const lang = 'es';
+---
+<Layout title={title} description={description} lang='es'>
+  <h1>Espanol</h1>
+</Layout>

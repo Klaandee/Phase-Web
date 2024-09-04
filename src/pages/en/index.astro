@@ -1,0 +1,10 @@
+---
+import Layout from '@/layouts/Layout.astro'
+
+import { head } from '@/languages/en.json';
+const { index } = head;
+const { title, description } = index;
+---
+<Layout title={title} description={description} lang='en'>
+  <h1>Inglish</h1>
+</Layout>

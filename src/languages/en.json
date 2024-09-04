@@ -1,0 +1,14 @@
+{
+  "head": {
+    "index": {
+      "title": "Phase Studios - Events For Minecraft",
+      "description": "Main page of the Phase Studios website"
+    }
+  },
+  "header": {
+    "home": "HOME"
+  },
+  "footer": {
+    "test": "TEST"
+  }
+}

@@ -1,0 +1,10 @@
+---
+import Es from "@/languages/es.json";
+import En from "@/languages/en.json";
+
+const { lang } = Astro.props;
+const language = lang === 'es' ? Es : En;
+---
+<header class="bg-zinc-900">
+  <h2 class="items-center flex"><img src="/assets/logos/phase-icon.webp" alt="" class="w-12 h-auto">Phase Studios</h2>
+</header>

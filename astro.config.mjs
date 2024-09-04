@@ -1,4 +1,11 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config"
+import tailwind from '@astrojs/tailwind';
+export default defineConfig({
+  // site: 'localhost:4321',
+  i18n: {
+    defaultLocale: 'es',
+    locales: ['es', 'en'],
+  },
 
-// https://astro.build/config
-export default defineConfig({});
+  integrations: [tailwind()],
+});
