@@ -6,7 +6,9 @@
     }
   },
   "header": {
-    "home": "HOME"
+    "home": "HOME",
+    "proyects": "PROJECTS",
+    "contact": "CONTACT"
   },
   "footer": {
     "test": "TEST"

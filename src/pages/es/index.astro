@@ -1,12 +1,15 @@
 ---
-import Layout from '@/layouts/Layout.astro';
-import Es from "@/languages/es.json";
+import Layout from "@/layouts/Layout.astro";
+import Hero from "@/components/home/Hero.astro";
 
-import { head } from '@/languages/es.json';
+import { head } from "@/languages/es.json";
 const { index } = head;
 const { title, description } = index;
-const lang = 'es';
+const lang = "es";
 ---
-<Layout title={title} description={description} lang='es'>
-  <h1>Espanol</h1>
+
+<Layout title={title} description={description} lang="es">
+  <main class="flex flex-col gap-8" style="background: linear-gradient(rgba(7, 6, 12, 0.4), rgba(7, 6, 12, 0.4)), url('https://cdn.wallpapersafari.com/77/4/4SlhwX.jpg') no-repeat;background-size: cover;">
+    <Hero lang="es" />
+  </main>
 </Layout>

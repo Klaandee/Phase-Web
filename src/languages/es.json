@@ -6,7 +6,12 @@
     }
   },
   "header": {
-    "home": "INICIO"
+    "home": "INICIO",
+    "proyects": "PROYECTOS",
+    "contact": "CONTACTO"
+  },
+  "hero": {
+    "subDescription": "Eventos para Minecraft Java!"
   },
   "footer": {
     "test": "TEST"

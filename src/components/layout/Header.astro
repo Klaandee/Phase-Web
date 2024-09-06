@@ -1,10 +1,67 @@
 ---
 import Es from "@/languages/es.json";
 import En from "@/languages/en.json";
+import HeaderMenu from "@/components/layout/HeaderMenu.astro"
 
 const { lang } = Astro.props;
-const language = lang === 'es' ? Es : En;
+const language = lang === "es" ? Es : En;
 ---
-<header class="bg-zinc-900">
-  <h2 class="items-center flex"><img src="/assets/logos/phase-icon.webp" alt="" class="w-12 h-auto">Phase Studios</h2>
+
+<header class="flex justify-center w-full top-0 z-30" id="navbar">
+  <div class="w-full content max-w-pag">
+    <div class="flex justify-between items-center w-full">
+      <img src="/assets/logos/Phase-Icon.png" alt="" class="w-24 h-auto" />
+      <nav class="">
+        <ul class="flex text-white gap-4 font-bold mq-560:hidden">
+          <li><a href="#">{language.header.home}</a></li>
+          <li><a href="#">{language.header.proyects}</a></li>
+          <li><a href="#">{language.header.contact}</a></li>
+        </ul>
+        <div class="hidden mq-560:block">
+          <!-- <HeaderMenu /> -->
+        </div>
+      </nav>
+    </div>
+  </div>
 </header>
+
+<script>
+  let navBar = document.getElementById("navbar")!;
+  let scroll = 10
+  window.onscroll = function () {
+    if (
+      document.body.scrollTop > scroll ||
+      document.documentElement.scrollTop > scroll
+    ) {
+      navBar.classList.add("show");
+    } else {
+      navBar.classList.remove("show");
+    }
+  };
+</script>
+<style>
+  #navbar {
+    transition: .5s ease-in;
+    padding: 1rem;
+    background: #050505; 
+  }
+  #navbar.show {
+    background: #202020;
+    color: #000;
+    padding: .50rem;
+
+    nav ul {
+      text-align: center;
+      width: 100%;
+    }
+  }
+  nav ul li {
+    a {
+      font-size: 1.15rem;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+</style>

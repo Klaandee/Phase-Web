@@ -1,10 +1,15 @@
 ---
-import Layout from '@/layouts/Layout.astro'
+import Layout from "@/layouts/Layout.astro";
+import Hero from "@/components/home/Hero.astro";
 
-import { head } from '@/languages/en.json';
+import { head } from "@/languages/en.json";
 const { index } = head;
 const { title, description } = index;
+const lang = 'en';
 ---
-<Layout title={title} description={description} lang='en'>
-  <h1>Inglish</h1>
+
+<Layout title={title} description={description} lang="en">
+  <main class="mt-40 relative">
+    <Hero lang={lang} />
+  </main>
 </Layout>

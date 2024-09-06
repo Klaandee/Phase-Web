@@ -8,8 +8,8 @@ interface Props {
 const { title, description, lang } = Astro.props;
 const { currentLocale } = Astro;
 
-import Header from '@/components/layout/Header.astro';
-import Footer from '@/components/layout/Footer.astro';
+import Header from "@/components/layout/Header.astro";
+import Footer from "@/components/layout/Footer.astro";
 ---
 
 <!doctype html>
@@ -19,18 +19,41 @@ import Footer from '@/components/layout/Footer.astro';
 		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="alternate" hreflang="es" href="https://tu-sitio.com/es/" />
-    <link rel="alternate" hreflang="en" href="https://tu-sitio.com/en/" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="alternate" hreflang="en" href="https://tu-sitio.com/en/" />
+		<link rel="icon" type="image/svg+xml" href="/assets/logos/Phase-Icon.png" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+		/>
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body>
-		<Header lang={lang} />
-		<slot />
+	<body class="overflow-hidden">
+		<div
+			id="onload"
+			class="z-50 text-3xl h-screen flex justify-center items-center bg-black text-white"
+		>
+			<img src="/assets/logos/Phase-Icon.png" class="w-24 h-auto" />
+			<h2>Cargando</h2>
+		</div>
+		<div class="min-h-screen" style="display: grid;grid-template-rows: auto 1fr auto;">
+			<Header lang={lang} />
+			<slot />
+			<Footer />
+		</div>
+		<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+		<script src="../javascript/main.js"></script>
 	</body>
 </html>
 <style is:global>
 	body {
-		background: #303030;
+		font-family: "Rubik", sans-serif;
+		/* height: 150vh; */
 	}
 </style>

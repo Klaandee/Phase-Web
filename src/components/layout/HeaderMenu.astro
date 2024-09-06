@@ -1,0 +1,54 @@
+---
+function toggleMenu() {
+  alert("hola")
+}
+---
+
+<div class="relative z-40">
+  <div class="flex items-center gap-2">
+    <h2 class="font-bold text-white">Menu</h2>
+    <button
+      id="menuButton"
+      class="focus:outline-none text-2xl bg-zinc-500 p-2 rounded-full"
+    >
+      <i class="bi bi-list"></i>
+    </button>
+  </div>
+  <div
+    class={`absolute right-0 mt-2 w-48 bg-zinc-500 rounded-lg shadow-xl menu hidden`}
+    style={{ height: "12rem" }}
+    id="navContainer"
+  >
+    <ul class="py-1 font-bold text-gray-300">
+      <li>
+        <a href="#" class="block px-4 py-2 hover:bg-gray-200">INICIO</a>
+      </li>
+      <li>
+        <a href="#" class="block px-4 py-2 hover:bg-gray-200">ANIMES</a>
+      </li>
+      <li class="ml-3">
+        <input
+          type="search"
+          name="search"
+          id="search"
+          placeholder="Buscar..."
+          class="bg-zinc-400 placeholder-zinc-600 w-36 rounded-lg outline-none"
+          style={{ padding: "4px 10px" }}
+        />
+      </li>
+      <li class="ml-3 mt-6">
+        <a
+          href="#"
+          class="bg-zinc-600 rounded-xl font-semibold hover:bg-zinc-700 transition-colors"
+          style={{ padding: "10px 15px" }}
+          ><i class="bi bi-person-fill"></i> LOGIN</a
+        >
+      </li>
+    </ul>
+  </div>
+</div>
+<script>
+  const MenuBtn = document.getElementById("menuButton")?.addEventListener('click', function() {
+    const container = document.getElementById("navContainer");
+  })
+</script>

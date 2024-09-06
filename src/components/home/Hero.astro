@@ -1,0 +1,24 @@
+---
+import Es from "@/languages/es.json";
+import En from "@/languages/en.json";
+
+const { lang } = Astro.props;
+const language = lang === "es" ? Es : En;
+---
+
+<section class="flex justify-center w-full mt-8">
+  <div class="w-full max-w-pag">
+    <h1
+      class="font-bold text-white text-8xl"
+      style="text-shadow: 0 0 30px #000;"
+    >
+      Phase Studios
+    </h1>
+    <p
+      class="text-gray-400 font-semibold text-2xl p-1 font-mono"
+      style="text-shadow: 0 0 30px #000;"
+    >
+      {language.hero.subDescription}
+    </p>
+  </div>
+</section>
