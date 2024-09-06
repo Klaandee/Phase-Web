@@ -1,6 +1,7 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import Hero from "@/components/home/Hero.astro";
+import Information from "@/components/home/Information.astro";
 
 import { head } from "@/languages/es.json";
 const { index } = head;
@@ -9,7 +10,8 @@ const lang = "es";
 ---
 
 <Layout title={title} description={description} lang="es">
-  <main class="flex flex-col gap-8" style="background: linear-gradient(rgba(7, 6, 12, 0.4), rgba(7, 6, 12, 0.4)), url('https://cdn.wallpapersafari.com/77/4/4SlhwX.jpg') no-repeat;background-size: cover;">
+  <main class="flex flex-col gap-8 p-4" style="background: linear-gradient(rgba(7, 6, 12, 0.4), rgba(7, 6, 12, 0.4)), url('https://cdn.wallpapersafari.com/77/4/4SlhwX.jpg') no-repeat;background-size: cover;">
     <Hero lang="es" />
+    <Information lang="es" />
   </main>
 </Layout>

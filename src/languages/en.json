@@ -13,7 +13,17 @@
   "hero": {
     "subDescription": "Events for Minecraft Java!"
   },
+  "information": {
+    "title": "Information",
+    "info": "We are a studio dedicated to creating events in Minecraft. We do events of all kinds. We stand out in that we do events mostly for the community, which means that anyone can participate, as long as they are admitted to the event. Our events are done independently, that means that we do not have any brand behind us, everything is done by our team. How do I start Phase Studios? Led by the founders JM and Ssounder, this studio was created and dedicated to creating events in Minecraft Bedrock. Today we returned to Minecraft Java with a better team and more objectives. We are still a small studio, but our purpose is to improve with each event and make players have a pleasant experience."
+  },
   "footer": {
-    "test": "TEST"
+    "socials": "Socials",
+    "sections": {
+      "title": "Sections",
+      "projects": "Projects",
+      "information": "Information",
+      "contact": "Contact"
+    }
   }
 }

@@ -24,21 +24,6 @@ const language = lang === "es" ? Es : En;
     </div>
   </div>
 </header>
-
-<script>
-  let navBar = document.getElementById("navbar")!;
-  let scroll = 10
-  window.onscroll = function () {
-    if (
-      document.body.scrollTop > scroll ||
-      document.documentElement.scrollTop > scroll
-    ) {
-      navBar.classList.add("show");
-    } else {
-      navBar.classList.remove("show");
-    }
-  };
-</script>
 <style>
   #navbar {
     transition: .5s ease-in;

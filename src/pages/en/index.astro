@@ -1,6 +1,7 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import Hero from "@/components/home/Hero.astro";
+import Information from "@/components/home/Information.astro";
 
 import { head } from "@/languages/en.json";
 const { index } = head;
@@ -11,5 +12,6 @@ const lang = 'en';
 <Layout title={title} description={description} lang="en">
   <main class="flex flex-col gap-8" style="background: linear-gradient(rgba(7, 6, 12, 0.4), rgba(7, 6, 12, 0.4)), url('https://cdn.wallpapersafari.com/77/4/4SlhwX.jpg') no-repeat;background-size: cover;">
     <Hero lang={lang} />
+    <Information lang={lang} />
   </main>
 </Layout>

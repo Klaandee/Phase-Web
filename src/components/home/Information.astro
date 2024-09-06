@@ -1,0 +1,18 @@
+---
+import Es from "@/languages/es.json";
+import En from "@/languages/en.json";
+
+const { lang } = Astro.props;
+const language = lang === "es" ? Es : En;
+---
+<section class="flex justify-center w-full" id={language.information.title}>
+  <div class="w-full max-w-5xl">
+    <div class="flex items-center rounded-2xl p-1" style="background: #0000003d;box-shadow: 0 0 20px #000">
+      <img src="/assets/design/mc-skin.png" alt="" class="w-80 h-auto">
+      <div class="">
+        <h2 class="text-white font-bold text-3xl">{language.information.title}</h2>
+        <p class="text-gray-400">{language.information.info}</p>
+      </div>
+    </div>
+  </div>
+</section>
