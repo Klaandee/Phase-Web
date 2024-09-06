@@ -10,6 +10,9 @@
     "proyects": "PROJECTS",
     "contact": "CONTACT"
   },
+  "hero": {
+    "subDescription": "Events for Minecraft Java!"
+  },
   "footer": {
     "test": "TEST"
   }
