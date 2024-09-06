@@ -10,6 +10,7 @@ const { currentLocale } = Astro;
 
 import Header from "@/components/layout/Header.astro";
 import Footer from "@/components/layout/Footer.astro";
+import UpButton from "@/components/layout/UpButton.astro";
 ---
 
 <!doctype html>
@@ -47,6 +48,7 @@ import Footer from "@/components/layout/Footer.astro";
 			<slot />
 			<Footer lang={lang} />
 		</div>
+		<UpButton lang={lang} />
 		<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 		<script src="../javascript/main.js"></script>
 	</body>

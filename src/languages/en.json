@@ -3,7 +3,8 @@
     "index": {
       "title": "Phase Studios - Events For Minecraft",
       "description": "Main page of the Phase Studios website"
-    }
+    },
+    "upbtn": "Go Up"
   },
   "header": {
     "home": "HOME",

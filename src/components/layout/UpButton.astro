@@ -1,0 +1,46 @@
+---
+import Es from "@/languages/es.json";
+import En from "@/languages/en.json";
+
+const { lang } = Astro.props;
+const language = lang === "es" ? Es : En;
+---
+<button id="scrollToTopBtn" title={language.head.upbtn} class="bi bi-arrow-90deg-up"></button>
+<script>
+  let scrollToTopBtn = document.getElementById("scrollToTopBtn")!;
+  window.onscroll = function () {
+    if (
+      document.body.scrollTop > 100 ||
+      document.documentElement.scrollTop > 100
+    ) {
+      scrollToTopBtn.classList.add("show");
+    } else {
+      scrollToTopBtn.classList.remove("show");
+    }
+  };
+  scrollToTopBtn.onclick = function () {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+</script>
+<style>
+  #scrollToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: -100px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    opacity: 0;
+    transition:
+      right 0.5s ease,
+      opacity 0.5s ease;
+  }
+  #scrollToTopBtn.show {
+    right: 20px;
+    opacity: 1;
+  }
+</style>
