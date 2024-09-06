@@ -5,6 +5,7 @@ export default {
 		extend: {
 			screens: {
 				'mq-560': { 'raw': '(max-width: 560px)'},
+				'mq-740': { 'raw': '(max-width: 740px)'},
 			},
 			maxWidth: {
 				'pag': '75rem',

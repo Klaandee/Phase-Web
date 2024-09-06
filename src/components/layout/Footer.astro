@@ -6,14 +6,16 @@ const { lang } = Astro.props;
 const language = lang === "es" ? Es : En;
 ---
 
-<section style="background: #050505;" class="text-white w-full flex justify-center">
+<section style="background: #050505;" class="text-white w-full flex justify-center p-2">
   <div class="w-full max-w-pag">
-    <div class="flex gap-6"> 
+    <div class="flex gap-6 items-center justify-center"> 
       <ul>
         <h2>{language.footer.socials}</h2>
-        <li><a href="/#"><i class="bi bi-discord"></i> Discord</a></li>
-        <li><a href="#"><i class="bi bi-twitter-x"></i> Twitter</a></li>
+        <li><a href="https://discord.gg/w4FBs5429m"><i class="bi bi-discord"></i> Discord</a></li>
+        <li><a href="https://twitter.com/PhaseStudioss"><i class="bi bi-twitter-x"></i> Twitter</a></li>
+        <li><a href="#"><i class="bi bi-youtube"></i> YouTube</a></li>
       </ul>
+      <p class="text-gray-400">All rights reserved | Phase Studios 2024 ™</p>
       <ul>
         <h2>{language.footer.sections.title}</h2>
         <li><a href="#"><i class="bi bi-info"></i> {language.footer.sections.information}</a></li>
@@ -27,5 +29,10 @@ const language = lang === "es" ? Es : En;
   h2 {
     font-weight: bold;
     font-size: 1.10rem;
+  }
+  @media (max-width: 440px) {
+    i {
+      display: none;
+    }
   }
 </style>
